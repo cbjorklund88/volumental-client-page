@@ -57,7 +57,7 @@ a{
 .hero-image {
   margin: 0 6%;
   height: 540px;
-  background-image: url("./Images/bauer-hero.gif");
+  background-image: url("./bauer-hero.gif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
