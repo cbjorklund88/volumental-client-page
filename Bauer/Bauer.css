@@ -1,0 +1,318 @@
+*{
+  box-sizing: border-box;
+}
+
+html{
+  background: white;
+  color: black;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+header{
+  background: white;
+  width: 95%;
+  height: 48px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  padding-top: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.volumental_logo{
+  float: left;
+  padding-left: 8%;
+}
+
+.navbar-list{
+ float: right;
+}
+
+.link-item{
+ margin-right: 50px;
+}
+
+/* style for all links in header and footer */
+a{
+ color: black;
+ text-decoration: none;
+ font-weight:700;
+ letter-spacing: 4px;
+ font-size: 14px;
+}
+
+/* media query for header and side margins */
+@media only screen and (max-width: 1200px) {
+  .navbar-list a{
+    margin-right: 20px;
+  }
+}
+
+.hero-image {
+  margin: 0 6%;
+  height: 540px;
+  background-image: url("./Images/bauer-hero.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  clear: both;
+  display: none;
+
+}
+.hero-image-small{
+  margin-top: 10px;
+  margin: 0 6%;
+  height: 400px;
+  background-image: url("./Images/hero-image-small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  clear: both;
+  display: none;
+
+}
+
+#bauer-logo {
+  position: relative;
+  text-align: center;
+  margin: 50px 60px;
+
+}
+
+#bauer-logo img{
+  width: auto;
+  max-height: 50px;
+
+}
+
+
+/* text box */
+.text{
+  margin: 0 auto;
+  height: auto;
+  align-items: center;
+  width: 60%;
+
+}
+
+/*  Bauer info text */
+.text p{
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.6px;
+  line-height: 1.5;
+  word-spacing: 5px;
+  text-align: left;
+}
+
+/* bauer link to webpage */
+.bauer-link{
+  text-decoration: underline;
+}
+
+/* bauer img and video */
+.bauer-media-box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding-top: 50px;
+  margin: 0 6%;
+}
+
+/* Responsive functions for image and video */
+ .bauer-media-box > .bauer-video {
+   max-height: 300px;
+   min-width: 300px;
+   flex: 1 1;
+   overflow: hidden;
+   margin: 8px;
+ }
+
+ .bauer-media-box > .bauer-video > video {
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+ }
+
+.bauer-media-box > .bauer-img {
+  flex: 1 1;
+  max-height: 300px;
+  min-width: 300px;
+  object-fit: cover;
+  overflow: hidden;
+  margin: 8px;
+}
+
+.bauer-img img{
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+/* footer */
+footer{
+  clear: both;
+  border-top: solid 1px black;
+  height: 220px;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-top: 100px;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.footer-links{
+  text-align: center;
+  padding-top: 15px;
+  letter-spacing: 50px;
+}
+
+.footer-signup{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  letter-spacing: 10px;
+  text-align: center;
+  color: black;
+  font-weight: 600;
+  letter-spacing: 4px;
+  font-size: 13px;
+  padding-top: 20px;
+}
+
+/*  Newsletter signup */
+p{
+  text-align: center;
+  color: black;
+  font-weight: 600;
+  letter-spacing: 4px;
+  font-size: 13px;
+  padding-top: 20px;
+}
+
+/* plus sign */
+.signup-img img{
+  margin-left: 30px;
+}
+
+/* Media queries */
+
+/* Desktop */
+@media (min-width: 722px){
+  .hero-image{
+    display: block;
+  }
+}
+
+/* tablet */
+@media (min-width:600px) and (max-width: 722px){
+ .footer-links {
+   display: flex;
+   flex-flow: column;
+   justify-content: space-around;
+ }
+ .hero-image-small{
+   display: block;
+ }
+}
+
+/* phone */
+@media (max-width:600px){
+  .footer-links {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+ }
+ .hero-image-small{
+  display: block;
+ }
+ .footer-signup{
+  max-width: 450px;
+ }
+}
+
+/* hamburger menu*/
+.ham-container {
+    display: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+@media (max-width: 836px) {
+   .ham-container {
+   display: inline-block;
+  }
+   .link-item {
+   display: none;
+  }
+}
+/*  hamburger menu lines & animation */
+.bar1, .bar2, .bar3 {
+    width: 24px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -6px);
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
+/* navbar menu in mobile & animation */
+.menu {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 48px;
+  left: 0;
+  right: 0;
+  height: calc(100vh - 48px);
+  background-color: white;
+  transition: opacity .25s ease;
+}
+
+.menu-item {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  font-family: "Lato" sans-serif;
+  font-weight: 600;
+  flex: 0 1;
+}
+
+.change > .menu {
+  opacity: 1;
+  transition: opacity .25s ease;
+}
+
+.image-text-container {
+  display: flex;
+
+}
